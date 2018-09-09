@@ -1,0 +1,13 @@
+input{
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+form{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.selectBox{
+width: 30%;
+}

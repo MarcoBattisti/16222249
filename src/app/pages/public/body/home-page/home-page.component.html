@@ -1,0 +1,48 @@
+<div class="animated fadeIn">
+  <!--Carousel Wrapper-->
+  <mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
+    <!--First slide-->
+    <mdb-carousel-item>
+        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology1.jpg" alt="Psychology">
+    </mdb-carousel-item>
+    <!--/First slide-->
+    <!--Second slide-->
+    <mdb-carousel-item>
+        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology2.jpg" alt="Second slide">
+    </mdb-carousel-item>
+    <!--/Second slide-->
+    <!--Third slide-->
+    <mdb-carousel-item>
+        <!--Mask color-->
+        <div class="view w-100" >
+          <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology3.jpg" alt="Third slide">
+          <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+        </div>
+        
+        <!--Caption-->
+        <div class="carousel-caption">
+            <div class="animated fadeInDown">
+                <h3 class="h3-responsive">Dott.ssa Lisa Battisti</h3>
+                <p>Psicologa, competente nei processi di promozione delle risorse in bambini e adolescenti.<br><br>
+                    Mi occupo di:<br>
+                    - Consulenza e Supporto Psicologico per l'età evolutiva, l'adulto e la coppia genitoriale<br>
+                    - Valutazione Psicodiagnostica in ambito Clinico e Forense<br>
+                    </p>
+            </div>
+        </div>
+        <!--Caption-->
+    </mdb-carousel-item>
+    <!--/Third slide-->
+  </mdb-carousel>
+  <!--/.Carousel Wrapper-->
+  <div id="mainBody" class="row lighten-3 p-3 m-auto">
+    <div id="psychologyInformations" class="col-lg-4 col-3">
+      <h1 class="text-left font-weight-bold m-2 text-white">Psicologa<br>Siena, Grosseto</h1>
+      <h3 class="text-left d-lg-block d-none text-white mt-3">Psicologa forense, competente nei processi di promozione delle risorse in bambini e adolescenti. Laureata in Psicologia dello Sviluppo e della Comunicazione, presso l'Università Cattolica del Sacro Cuore, Milano.</h3>
+    </div>
+  </div>
+</div>
+
+<div id="cardFormContainer">
+  <card-form></card-form>
+</div>

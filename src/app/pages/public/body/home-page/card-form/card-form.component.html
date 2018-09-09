@@ -1,0 +1,53 @@
+<!--Form-Card-->
+<mdb-card>
+  <mdb-card-body>
+    <!-- Material form register -->
+    <form [formGroup]="cardForm">
+      <p class="h4 text-center py-4">Contattami</p>
+
+      <!-- Material input text -->
+      <div class="md-form">
+        <i class="fa fa-user prefix grey-text"></i>
+        <input type="text" id="contactFormName" formControlName="contactFormName" mdbInputDirective>
+        <label for="contactFormName" class="font-weight-light">Il tuo nome</label>
+      </div>
+
+      <!-- Material input email -->
+      <div class="md-form">
+        <i class="fa fa-envelope prefix grey-text"></i>
+        <input mdbActive type="email" id="contactFormEmail" formControlName="contactFormEmail" mdbInputDirective>
+        <label for="contactFormEmail" class="font-weight-light">La tua email (Richiesto)</label>
+      </div>
+
+      <!-- Material input email -->
+      <div class="md-form">
+        <i class="fa fa-phone-square prefix grey-text"></i>
+        <input type="number" id="contactFormNumber" formControlName="contactFormNumber" mdbInputDirective>
+        <label for="contactFormNumber">Il tuo numero di telefono</label>
+      </div>
+
+      <div class="md-form">
+          <i class="fa fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="contactFormMessage" formControlName="contactFormMessage" class="md-textarea" style="height: 100px"
+          mdbInputDirective></textarea>
+          <label for="contactFormMessage">Il tuo messaggio (Richiesto)</label>
+      </div>
+
+      <ng-select [items]="cities"
+      bindLabel="name"
+      placeholder="Select city"
+      [(ngModel)]="selectedCity">
+</ng-select>
+
+      <p>
+          Selected city: {{selectedCity | json}}
+      </p>
+
+      <div class="text-center py-4 mt-3">
+        <button mdbBtn color="cyan" class="waves-light" type="submit" mdbWavesEffect>Invia</button>
+      </div>
+    </form>
+    <!-- Material form register -->
+  </mdb-card-body>
+</mdb-card>
+<!--Form-Card-->

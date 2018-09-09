@@ -1,0 +1,12 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color-dark fixed-top scrolling-navbar sticky-top">
+    <mdb-navbar-brand>
+        <a href="home" class="navbar-brand">
+          <img src="assets/Logo.png" height="80" alt="Logo">
+        </a>
+    </mdb-navbar-brand>
+    <links class="justify-content-end">
+      <div class="navbar-nav font-weight-bold">
+          <a routerLinkActive="active" routerLink="{{item.path}}" *ngFor="let item of navbarItems" class="nav-item nav-link waves-light" href="#" mdbWavesEffect>{{item.name}} </a>
+      </div>
+  </links>
+</mdb-navbar>

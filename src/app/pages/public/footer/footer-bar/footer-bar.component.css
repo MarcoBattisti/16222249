@@ -1,0 +1,46 @@
+.facebook-icon:hover{
+    color: #3b5998;
+  }
+.google-icon:hover{
+    color: #DD4B39;
+}
+.linkedin-icon:hover{
+    color: #0077b5;
+}
+.instagram-icon:hover{
+    color: #cc2366; 
+}
+.fa-fw:hover{
+    background:white;
+    width: 25px;
+    height: 25px;
+}
+.fa-fw{
+    background:rgba(0,0,0,0.2);
+    width: 25px;
+    height: 25px;
+}
+.link-Home:hover{
+    color: black;
+    font-weight: bold;
+}
+.link-Chi.sono:hover{
+    color: black;
+    font-weight: bold;
+}
+.link-Attività:hover{
+    color: black;
+    font-weight: bold;
+}
+.link-News:hover{
+    color: black;
+    font-weight: bold;
+}
+.link-Contatti:hover{
+    color: black;
+    font-weight: bold;
+}
+
+#firstColumn{
+    color:rgba(255,255,255,0.25);
+}

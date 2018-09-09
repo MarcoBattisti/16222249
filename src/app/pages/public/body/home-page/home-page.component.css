@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Acme|Neucha');
+
+/*
+font-family: 'Acme', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Neucha', cursive;
+*/
+
+h3{font-family: 'Neucha', cursive;}
+h1{font-family: 'Acme', sans-serif;}
+
+
+#carouselPhoto{
+    max-height: 85vh;
+}
+
+#mainBody{
+    background: url("../../../../../assets/background-Lisaleft3.jpg") bottom;
+    background-size: cover;
+}
+
+@media screen and (min-width: 992px) {
+    #mainBody{
+        background: url("../../../../../assets/background-Lisaleft4.jpg") bottom no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #psychologyInformations{
+        margin-left: 150px;
+        margin-top: 110px;
+        margin-bottom: 110px;
+    }
+}
+
+#cardFormContainer{
+    margin: 100px;
+}

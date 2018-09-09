@@ -1,0 +1,65 @@
+<!--Footer-->
+<footer class="page-footer grey darken-3 pt-4">
+
+  <!--Footer Links-->
+  <div class="container-fluid text-center text-md-left">
+      <div class="row">
+           <!--Footer Logo-->
+            <div class="col-md-2 align-self-center mb-2">
+                <img src="assets/Logo.png" height="80" alt="Responsive image">
+            </div>
+            <!--Footer Logo-->
+
+          <!--First column-->
+          <div class="row col-lg-5 col mb-2">
+
+              <div class="col">
+                <p id="firstColumn">Psicologa iscritta all'Albo degli Psicologi della Toscana (nr xxxx)</p>
+                <p id="firstColumn">P.I. xxxxxxxxx</p>
+                <!--Social buttons-->
+                <a class="mr-2" href="https://www.facebook.com/battisti.psicologa/">
+                    <fa-layers class="fa-fw animated" [ngClass]="facebookAnimation" (mouseenter) ="facebookAnimation = animationIn"  (mouseleave) ="facebookAnimation = animationOut">
+                        <fa-icon class="facebook-icon" [icon]="['fab', 'facebook-f']"  transform="shrink-5 right-2" size="2x" [mask]="['fas', 'square']" ></fa-icon>
+                    </fa-layers>
+                </a>
+                <a class="mr-2">
+                    <fa-layers class="fa-fw animated" [ngClass]="googleAnimation" (mouseenter) ="googleAnimation = animationIn"  (mouseleave) ="googleAnimation = animationOut">
+                        <fa-icon class="google-icon" [icon]="['fab', 'google-plus-g']"  transform="shrink-6" size="2x" [mask]="['fas', 'square']"></fa-icon>
+                    </fa-layers>
+                </a>
+                <a class="mr-2" href="https://www.linkedin.com/in/lisa-battisti-648453a4" >
+                    <fa-layers class="fa-fw animated" [ngClass]="linkedinAnimation" (mouseenter) ="linkedinAnimation = animationIn"  (mouseleave) ="linkedinAnimation = animationOut">
+                        <fa-icon class="linkedin-icon" [icon]="['fab', 'linkedin-in']"  transform="shrink-5" size="2x" [mask]="['fas', 'square']"></fa-icon>
+                    </fa-layers>
+                </a>
+                <a class="mr-2">
+                    <fa-layers class="fa-fw animated" [ngClass]="instagramAnimation" (mouseenter) ="instagramAnimation = animationIn"  (mouseleave) ="instagramAnimation = animationOut">
+                        <fa-icon class="instagram-icon" [icon]="['fab', 'instagram']"  transform="shrink-5" size="2x" [mask]="['fas', 'square']"></fa-icon>
+                    </fa-layers>
+                </a>
+                <!--Social buttons-->
+              </div>
+          </div>
+          <!--/.First column-->
+
+          <!--Second column-->
+          <div class="col-lg-2 col mb-2">
+              <h5 class="title font-weight-bold">Naviga nel sito</h5>
+              <ul class="list-unstyled">
+                  <li *ngFor="let link of links"><a class="link-{{link.name}}" routerLinkActive="active" routerLink="{{link.path}}" href="#"> {{link.name}}</a></li>
+              </ul>
+          </div>
+          <!--/.Second column-->
+      </div>
+  </div>
+  <!--/.Footer Links-->
+
+  <!--Copyright-->
+  <div class="row footer-copyright text-center m-auto py-3">
+      <div class="col container-fluid">
+        Copyrights ©. All Rights Reserved Lisa Battisti.
+      </div>
+  </div>
+  <!--/.Copyright-->
+</footer>
+<!--/.Footer-->
