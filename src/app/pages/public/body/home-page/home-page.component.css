@@ -19,21 +19,25 @@ h1{font-family: 'Acme', sans-serif;}
     background-size: cover;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 600px) {
+    #psychologyInformations{
+        margin-left: 150px;
+        margin-top: 110px;
+        margin-bottom: 110px;
+    }
+
+    #cardFormContainer{
+        margin: 50px;
+    }
+
     #mainBody{
         background: url("../../../../../assets/background-Lisaleft4.jpg") bottom no-repeat;
         background-size: cover;
     }
 }
 
-@media screen and (min-width: 992px) {
-    #psychologyInformations{
-        margin-left: 150px;
-        margin-top: 110px;
-        margin-bottom: 110px;
+@media screen and (min-width: 900px) {
+    #cardFormContainer{
+        margin: 100px;
     }
-}
-
-#cardFormContainer{
-    margin: 100px;
 }

@@ -15,10 +15,11 @@ import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faSquare } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { NgSelectModule } from '@ng-select/ng-select';
+import { SelectModule } from 'ng-select';
 import { CardFormComponent } from './pages/public/body/home-page/card-form/card-form.component';
 import { MatOptionModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
-
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 // Add an icon to the library for convenient access in other components
 library.add(faFacebookF, faSquare, faGooglePlusG, faLinkedinIn, faInstagram);
 
@@ -42,10 +43,12 @@ const appRoutes: Routes = [
     FontAwesomeModule,
     FormsModule, 
     ReactiveFormsModule,
-    NgSelectModule,
+    SelectModule,
     MatOptionModule, 
     MatFormFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

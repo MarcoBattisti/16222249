@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { navbarItem } from './navbar-Item';
+import { NavbarPageListService } from  '../../body/home-page/Api/navbar_pages/navbar-page-list.service';
 
 @Component({
   selector: 'app-navigation-bar',
@@ -9,9 +10,15 @@ import { navbarItem } from './navbar-Item';
 export class NavigationBarComponent implements OnInit {
   navbarItems: Array<navbarItem>;
   
-  constructor() { this.navbarItems = [new navbarItem('home','Home'), new navbarItem('about-me','Chi sono'), new navbarItem('my-activities','Attività'), new navbarItem('news','News'), new navbarItem('contact','Contatti')];}
+  constructor(private navbarPageList : NavbarPageListService) { }
 
   ngOnInit() {
+    this.getNavbarPages();
   }
 
+  public getNavbarPages(){
+    this.navbarPageList.getNavbarPages().subscribe((data:  Array<navbarItem>) => {
+      this.navbarItems = data;
+    });
+  }
 }

@@ -2,8 +2,22 @@
 <mdb-card>
   <mdb-card-body>
     <!-- Material form register -->
-    <form [formGroup]="cardForm">
-      <p class="h4 text-center py-4">Contattami</p>
+    <form class="" [formGroup]="cardForm">
+      <p class="h4 text-center py-4-lg">Contattami</p>
+
+      <div class="md-form">
+          <ng-select
+            formControlName="SelectRequest"
+            [options]="requests"
+            [allowClear]="true"
+            notFoundMsg=""
+            placeholder="Seleziona la Richiesta.."
+            (selected)="onSelectedRequest($event)"
+            (deselected)="onDeselectedRequest($event)" 
+            mdbInputDirective
+            [mdbValidate]="false">
+          </ng-select>
+        </div>
 
       <!-- Material input text -->
       <div class="md-form">
@@ -22,7 +36,7 @@
       <!-- Material input email -->
       <div class="md-form">
         <i class="fa fa-phone-square prefix grey-text"></i>
-        <input type="number" id="contactFormNumber" formControlName="contactFormNumber" mdbInputDirective>
+        <input type="text" id="contactFormNumber" formControlName="contactFormNumber" mdbInputDirective>
         <label for="contactFormNumber">Il tuo numero di telefono</label>
       </div>
 
@@ -33,18 +47,24 @@
           <label for="contactFormMessage">Il tuo messaggio (Richiesto)</label>
       </div>
 
-      <ng-select [items]="cities"
-      bindLabel="name"
-      placeholder="Select city"
-      [(ngModel)]="selectedCity">
-</ng-select>
-
-      <p>
-          Selected city: {{selectedCity | json}}
-      </p>
+      <div class="md-form ml-5 mr-5" *ngIf="request == 'A'">
+        <ng-select
+          formControlName="selectWorkOffice"
+          [options]="myOptions"
+          [allowClear]="true"
+          placeholder="Seleziona l'ufficio.."
+          (selected)="onSelected($event)"
+          (deselected)="onDeselected($event)" 
+          mdbInputDirective
+          [mdbValidate]="false">
+        </ng-select>
+      </div>
 
       <div class="text-center py-4 mt-3">
-        <button mdbBtn color="cyan" class="waves-light" type="submit" mdbWavesEffect>Invia</button>
+        <button mdbBtn color="cyan" class="waves-light" type="submit" mdbWavesEffect
+            [disabled]="!cardForm.valid">
+            Invia
+          </button>
       </div>
     </form>
     <!-- Material form register -->
