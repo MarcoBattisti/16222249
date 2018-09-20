@@ -3,19 +3,19 @@
   <mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
     <!--First slide-->
     <mdb-carousel-item>
-        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology1.jpg" alt="Psychology">
+        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology1.jpg" alt="Psychology" style="max-height: 500px">
     </mdb-carousel-item>
     <!--/First slide-->
     <!--Second slide-->
     <mdb-carousel-item>
-        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology2.jpg" alt="Second slide">
+        <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology2.jpg" alt="Second slide" style="max-height: 500px">
     </mdb-carousel-item>
     <!--/Second slide-->
     <!--Third slide-->
     <mdb-carousel-item>
         <!--Mask color-->
         <div class="view w-100" >
-          <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology3.jpg" alt="Third slide">
+          <img id="carouselPhoto" class="d-block w-100" src="assets/carouselPsychology3.jpg" alt="Third slide" style="max-height: 500px">
           <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
         </div>
         
@@ -36,13 +36,14 @@
   </mdb-carousel>
   <!--/.Carousel Wrapper-->
   <div id="mainBody" class="row lighten-3 p-3 m-auto">
-    <div id="psychologyInformations" class="col-lg-4 col-3">
+    <div id="psychologyInformations" class="col-lg-4 col">
       <h1 class="text-left font-weight-bold m-2 text-white">Psicologa<br>Siena, Grosseto</h1>
       <h3 class="text-left d-lg-block d-none text-white mt-3">Psicologa forense, competente nei processi di promozione delle risorse in bambini e adolescenti. Laureata in Psicologia dello Sviluppo e della Comunicazione, presso l'Università Cattolica del Sacro Cuore, Milano.</h3>
     </div>
   </div>
-</div>
 
-<div id="cardFormContainer">
-  <card-form></card-form>
+  <div id="cardFormContainer">
+    <card-form></card-form>
+  </div>
+
 </div>
