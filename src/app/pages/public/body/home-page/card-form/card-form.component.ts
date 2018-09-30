@@ -56,9 +56,7 @@ export class CardFormComponent implements OnInit {
   }
 
   public getOffices(){
-    this.officeList.getOffices().subscribe((data:  Array<IOption>) => {
-      this.myOptions = data;
-    });
+    this.myOptions = this.officeList.getOfficesIOption();
   }
 
   public getRequests(){

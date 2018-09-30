@@ -9,7 +9,7 @@ export class ConfigService {
 
   config: Config = {host:"localhost:80", context:"api"};
 
-  page: Page = {home: "homePage"}
+  page: Page = {home: "homePage", common: "common"}
 
   getConfig(){
     return this.config;
@@ -27,6 +27,7 @@ export class ConfigService {
 
 export class Page {
   home: string;
+  common: string;
 }
 
 
